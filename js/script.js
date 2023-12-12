@@ -25,8 +25,12 @@ createApp({
     methods: {
 
         addTask() {
-            this.todos.unshift(this.message);
+            this.todos.unshift({text: this.message});
             this.message = "";
+        },
+        delTask(indice) {
+            this.todos.splice(indice, 1);
+
         }
 
 

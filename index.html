@@ -22,19 +22,19 @@
 
         <!-- gestione task input -->
         <div class="new-task">
-            <input type="text" placeholder="Nuova task" v-model="message">
+            <input type="text" placeholder="Nuova task" v-model="message" @keyup.enter="addTask">
             <button @click = "addTask"> Aggiungi </button>
         </div>
 
         <!-- gestione  task output -->
         <div class="tasks-container">
-            <ul>
-                <li class="task" v-for="(task,i) in todos">
+            <ul v-if="todos.length > 0 ">
+                <li class="task" v-for="(task,i) in todos" :key="i" :class=" todos[i].done ? 'delete' : '' ">
                     {{ task.text }}
-                    <i class="fa-solid fa-xmark"></i>
+                    <i @click="delTask" class="fa-solid fa-xmark"></i>
                 </li>
-                
             </ul>
+            <h2 v-else> Non ci sono task </h2>
         </div>
 
 

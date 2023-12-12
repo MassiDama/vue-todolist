@@ -35,3 +35,7 @@ ul {
 i {
     margin-left: 200px;
 }
+
+.delete {
+    text-decoration: line-through;
+}
