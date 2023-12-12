@@ -4,6 +4,7 @@ createApp({
     data() {
         return {
             
+            error: false,
             message: "",
             todos: [
                     {
@@ -25,8 +26,14 @@ createApp({
     methods: {
 
         addTask() {
-            this.todos.unshift({text: this.message});
-            this.message = "";
+            if (this.message.length <= 7) {
+                this.error = true;
+            } else {
+                this.todos.unshift({text: this.message});
+                this.message = "";
+                this.error = false;
+            }
+            
         },
         delTask(indice) {
             this.todos.splice(indice, 1);

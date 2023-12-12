@@ -26,6 +26,12 @@
             <button @click = "addTask"> Aggiungi </button>
         </div>
 
+        <!-- gestione errori -->
+        <div class="error">
+            <small> Devi inserire una task di almeno 7 caratteri</small>
+        </div>
+
+
         <!-- gestione  task output -->
         <div class="tasks-container">
             <ul v-if="todos.length > 0 ">

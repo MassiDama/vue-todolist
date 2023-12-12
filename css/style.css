@@ -5,10 +5,16 @@
     box-sizing: border-box;
 }
 
+#app {
+    background-color: rgba(215, 215, 16, 0.342);
+    height: 100vh;
+}
+
 /* stili d'intestazione */
 .logo {
     display: flex;
     justify-content: center;
+    padding-top: 20px;
 }
 
 img {
@@ -19,17 +25,52 @@ img {
 .new-task {
     display: flex;
     justify-content: center;
-    margin: 80px 0;
+    margin-top: 80px;
+}
+
+input {
+    padding: 10px;
+    width: 500px;
+    margin-right: 20px;
+    border-radius: 10px;
+}
+
+button {
+    padding: 0 10px;
+    color: white;
+    background-color: #b41f24;
+    border-radius: 10px;
+}
+
+/* stili gestioni errori */
+small {
+    color: red;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 80px;
 }
 
 /* stili gestione task output */
 .tasks-container {
     display: flex;
     justify-content: center;
+    border: 1px solid black;
+    width: 50%;
+    margin: 0 auto;
+    padding: 50px;
+    border-radius: 30px;
 }
 
 ul {
     list-style: none;
+}
+
+li {
+    padding-bottom: 20px;
+    padding-top: 10px;
+    border-bottom: 1px solid black;
+    display: flex;
+    justify-content: space-between;
 }
 
 i {
