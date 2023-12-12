@@ -1,0 +1,37 @@
+/* stili generali pagina */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* stili d'intestazione */
+.logo {
+    display: flex;
+    justify-content: center;
+}
+
+img {
+    width: 400px;
+}
+
+/* stili gestione nuova task */
+.new-task {
+    display: flex;
+    justify-content: center;
+    margin: 80px 0;
+}
+
+/* stili gestione task output */
+.tasks-container {
+    display: flex;
+    justify-content: center;
+}
+
+ul {
+    list-style: none;
+}
+
+i {
+    margin-left: 200px;
+}
